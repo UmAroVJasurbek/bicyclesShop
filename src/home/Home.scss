@@ -1,0 +1,237 @@
+@import "../variables.scss";
+.home_title_h3 {
+  text-align: center;
+  font-size: 58px;
+  font-family: "Racing Sans One", display;
+  font-weight: 400;
+  margin-top: 144px;
+  margin-bottom: 14px;
+}
+.home_container_bicycle {
+  display: flex;
+  justify-content: space-around;
+}
+.home_mini_container {
+  position: relative;
+  width: 280px;
+
+  .home_icon_cart {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--primary-font-white);
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    padding: 5px;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: var(--primary-font-black);
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  p {
+    color: var(--primary-font-black);
+    opacity: 0.6;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 18px;
+    font-family: "Racing Sans One", display;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h4 {
+    color: var(--primary-font-black);
+  }
+  .home_rating {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  &:hover .home_icon_cart {
+    opacity: 1;
+  }
+}
+h3::selection,
+h1::selection,
+h2::selection,
+p::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+img::selection,
+span::selection {
+  background: var(--secondary-font-color);
+  color: #fff;
+}
+
+.home_img {
+  width: 280px;
+  width: 100%;
+  height: 280px;
+}
+.home_container {
+  display: flex;
+  max-width: 14500px;
+  width: 100%;
+  justify-content: space-between;
+  // padding: 15px;
+  background-color: #fff;
+  margin: 0 auto;
+  gap: 20px;
+  border: #ff0000 1px solid;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.btn_box {
+  width: 100%;
+  max-width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_link {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  background: transparent;
+
+  li {
+    list-style: none;
+    font-size: 22px;
+    font-family: "Racing Sans One", sans-serif;
+    opacity: 0.8;
+    cursor: pointer;
+    background: transparent;
+    color: var(--primary-font-white);
+  }
+  li:hover {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .nav_ul,
+  .nav_btn {
+    display: none;
+  }
+
+  .icon-menu {
+    display: block;
+    background: #fff;
+    color: #ff0000;
+    width: 35px;
+    font-size: 1px;
+    height: 35px;
+  }
+}
+.nav_container {
+  justify-content: space-between;
+  // padding-left: 20px;
+  .page_active {
+    color: #ff0000;
+    background: #ff0000;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  .nav {
+    position: absolute;
+    top: 0;
+  }
+
+  height: 720px;
+  background-image: url("images/bgc__color.webp");
+  background-size: cover;
+  background-position: 0 -200px;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 720px;
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-font-dark-color) 50%,
+    var(--secondary-font-color-opasity) 50%
+  );
+
+  z-index: 10;
+}
+
+.hero_title_h1 {
+  font-size: 85px;
+  z-index: 20;
+}
+.hero_title_h1,
+.hero_title_h2,
+.hero_title_h3,
+p {
+  color: var(--primary-font-white);
+  font-family: "Racing Sans One", cursive;
+  z-index: 20;
+}
+.hero_title_h3 {
+  font-weight: 200;
+  font-size: 22px;
+}
+p {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.hero_title_h2 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.hero_btn {
+  background-color: var(--secondary-font-color);
+  border: 0px;
+  padding: 10px 20px;
+  max-width: 120px;
+  color: var(--primary-font-white);
+  font-family: "Racing Sans One", cursive;
+  font-size: 20px;
+  z-index: 20;
+
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 35px;
+  &:hover {
+    background-color: rgb(104, 3, 3);
+    border: 0;
+  }
+}
+
+.hero_container {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 130px;
+
+  .hero_text {
+    display: none;
+  }
+
+  &:p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .target_icon {
+    color: var(--secondary-font-white);
+    margin-right: 15px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,128 @@
+@import "./variables.scss";
+
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  overflow-x: hidden;
+}
+body::selection {
+  background: var(--secondary-font-color);
+  color: #fff;
+}
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+img::selection,
+span::selection {
+  background: var(--secondary-font-color);
+  color: #fff;
+}
+.home_link {
+  text-decoration: none;
+}
+.hero {
+  position: relative;
+  .nav {
+    position: absolute;
+    top: 0;
+  }
+
+  height: 720px;
+  background-image: url("images/bgc_color.webp");
+  background-size: cover;
+  background-position: 0 -200px;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 720px;
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-font-dark-color) 50%,
+    var(--secondary-font-color-opasity) 50%
+  );
+  // border: 1px solid red;
+  z-index: 10;
+}
+
+.hero_title_h1 {
+  font-size: 85px;
+  z-index: 20;
+}
+.hero_title_h1,
+.hero_title_h2,
+.hero_title_h3,
+p {
+  color: var(--primary-font-white);
+  font-family: "Racing Sans One", cursive;
+  z-index: 20;
+}
+.hero_title_h3 {
+  font-weight: 200;
+  font-size: 22px;
+}
+p {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.hero_title_h2 {
+  font-size: 30px;
+  font-weight: 100;
+}
+p::selection {
+  background: red;
+}
+
+.hero_btn {
+  background-color: var(--secondary-font-color);
+  border: 0px;
+  padding: 10px 20px;
+  max-width: 120px;
+  color: var(--primary-font-white);
+  font-family: "Racing Sans One", cursive;
+  font-size: 20px;
+  z-index: 20;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 35px;
+  &:hover {
+    background-color: rgb(234, 4, 4);
+  }
+}
+
+.hero_container {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 130px;
+
+  .hero_text {
+    display: none;
+  }
+
+  &:p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .target_icon {
+    color: var(--secondary-font-white);
+    margin-right: 15px;
+    font-size: 18px;
+  }
+}
