@@ -1,0 +1,183 @@
+@import "../../variables.scss";
+
+.colletion {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 60px 0;
+  h2 {
+    font-size: 48px;
+    font-family: "Racing Sans One", cursive;
+    color: var(--primary-font-black);
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 30px;
+  }
+}
+.colletion_container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 300px 300px;
+  grid-gap: 1em;
+
+  p {
+    color: (--primary-font-white);
+  }
+  h3,
+  h4 {
+    font-family: "Racing Sans One", cursive;
+    font-weight: 300;
+  }
+}
+
+@mixin colletion_choose {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 30px;
+  align-content: end;
+}
+
+@mixin colletion_choose_text {
+  z-index: 10;
+  color: #fff;
+
+  align-content: end;
+  position: relative;
+}
+.colletion_choose_1 {
+  @include colletion_choose;
+  background-image: url("images/specification-1.webp");
+  max-width: 580px;
+  width: 100%;
+  grid-column: 1 / 4;
+  margin-right: 0;
+
+  h3 {
+    @include colletion_choose_text;
+    margin-bottom: 0;
+
+    font-family: "Racing Sans One", cursive;
+    font-size: 32px;
+  }
+  p {
+    @include colletion_choose_text;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+  }
+}
+.colletion_choose_2 {
+  @include colletion_choose;
+  background-image: url("images/specification-2.webp");
+  grid-column: 4 / 7;
+  max-width: 580px;
+  width: 100%;
+
+  h3 {
+    @include colletion_choose_text;
+    margin-bottom: 0;
+    font-family: "Racing Sans One", cursive;
+    font-size: 32px;
+  }
+
+  p {
+    @include colletion_choose_text;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+  }
+}
+
+.colletion_choose_3 {
+  @include colletion_choose;
+
+  background-image: url("images/specification-3.webp");
+  grid-column: 1/3;
+  max-width: 380px;
+  width: 100%;
+
+  h4 {
+    @include colletion_choose_text;
+    font-size: 22px;
+  }
+}
+.colletion_choose_4 {
+  @include colletion_choose;
+  background-image: url("images/specification-4.webp");
+  grid-column: 3/5;
+  max-width: 380px;
+  width: 100%;
+  h4 {
+    @include colletion_choose_text;
+    font-size: 22px;
+  }
+}
+.colletion_choose_5 {
+  @include colletion_choose;
+  background-image: url("images/specification-5.webp");
+  grid-column: 5/7;
+  max-width: 380px;
+  width: 100%;
+  h4 {
+    @include colletion_choose_text;
+    font-size: 22px;
+  }
+}
+
+.colletion_choose_1::before,
+.colletion_choose_2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  max-width: 580px;
+  width: 100%;
+  height: 300px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0;
+  background-image: linear-gradient(
+    180deg,
+    #00000069 0%,
+    var(--global-color-astglobalcolor7) 100%
+  );
+}
+
+.colletion_choose_3::before,
+.colletion_choose_4::before,
+.colletion_choose_5::before {
+  content: "";
+  display: block;
+  position: absolute;
+  max-width: 380px;
+  width: 100%;
+  height: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-image: linear-gradient(
+    180deg,
+    #00000069 0%,
+    var(--global-color-astglobalcolor7) 100%
+  );
+}
+
+.colletion_choose_1:hover::before,
+.colletion_choose_2:hover::before,
+.colletion_choose_3:hover::before,
+.colletion_choose_4:hover::before,
+.colletion_choose_5:hover::before,
+.colletion_choose_6:hover::before {
+  background-image: linear-gradient(
+    180deg,
+    #00000092 0%,
+    var(--global-color-astglobalcolor7) 100%
+  );
+}

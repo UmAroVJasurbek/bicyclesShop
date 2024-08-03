@@ -1,0 +1,85 @@
+@import "../../variables.scss";
+.FooterHero {
+  background-image: url("images/bicycle-2.webp");
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 695px;
+  text-align: center;
+  display: flex;
+  background-position: 0 -400px;
+  flex-direction: column;
+  margin-top: 0px;
+  width: 100%;
+
+  justify-content: center;
+  z-index: 0;
+  p {
+    max-width: 600px;
+    width: 100%;
+    color: #f4f4f4c8;
+  }
+}
+.FooterHero::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 695px;
+
+  background-image: linear-gradient(
+    180deg,
+    #00000069 0%,
+    var(--global-color-astglobalcolor7) 100%
+  );
+
+  z-index: -1;
+}
+.FooterHero_wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 35px;
+  h3 {
+    font-size: 22px;
+    font-family: "Racing Sans One", cursive;
+    font-weight: 300;
+    color: var(--primary-font-white);
+  }
+
+  h2 {
+    font-size: 48px;
+    font-family: "Racing Sans One", cursive;
+    color: var(--primary-font-white);
+    font-weight: 400;
+  }
+  p {
+    margin: 0 auto;
+  }
+}
+
+.FooterHero_btn {
+  width: 135px;
+  height: 45px;
+  margin: 0 auto;
+  background-color: var(--secondary-font-color);
+  border: 0px;
+  color: var(--primary-font-white);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  z-index: 20;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 15px 20px;
+  font-weight: 600;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: rgb(104, 3, 3);
+    border: 0;
+  }
+}

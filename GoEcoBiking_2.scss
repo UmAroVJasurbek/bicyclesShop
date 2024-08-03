@@ -1,0 +1,106 @@
+@import "../../variables.scss";
+
+.goEcoBiking {
+  background-color: #cccccc4f;
+  padding-top: 40px;
+}
+.goEcoBiking_title {
+  text-align: center;
+  font-size: 58px;
+  font-family: "Racing Sans One", display;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.goEcoBiking_videos {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/about-movie-bg-1.jpg");
+  margin-bottom: 40px;
+  color: aliceblue;
+  align-items: end;
+
+  .goEcoBiking_icon {
+    width: 58px;
+    height: 58px;
+    z-index: 10;
+  }
+
+  h3 {
+    font-size: 32px;
+    z-index: 10;
+    font-weight: 400;
+    font-family: "Racing Sans One", display;
+  }
+  .goEcoBiking_video_box {
+    padding: 0 0 70px 70px;
+    z-index: 10;
+    .goEcoBiking_icon {
+      opacity: 0.6;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 600px;
+    background-image: linear-gradient(
+      180deg,
+      #00000066 0%,
+      var(--global-color-astglobalcolor7) 100%
+    );
+  }
+}
+
+.goEcoBiking_box2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 260px;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 120px;
+}
+.goEcoBiking_box2_text {
+  max-width: 500px;
+  width: 100%;
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: "Racing Sans One", display;
+  }
+  .goEcoBiking_box2_text_p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    color: #4b4f58;
+  }
+}
+
+.goEcoBiking_btn {
+  background-color: var(--secondary-font-color);
+  border: 1px solid transparent;
+  // padding: 6px;
+  height: 45px;
+  max-width: 230px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 20px;
+
+  transition: 0.3s;
+  &:hover {
+    background-color: rgb(104, 3, 3);
+    border: transparent;
+  }
+}
