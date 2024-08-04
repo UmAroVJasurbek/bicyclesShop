@@ -1,0 +1,241 @@
+.Accessories_container {
+  background-color: #f2f3f4;
+}
+
+.Accessories {
+  display: flex;
+  // background-color: #8082852c;
+  justify-content: center;
+  // align-items: center;
+  gap: 32px;
+  // height: 1100px;
+  margin-top: 50px;
+  background-color: s;
+  margin-bottom: 50px;
+}
+
+.Accessories_img {
+  width: 218px;
+  height: 218px;
+  overflow: hidden;
+}
+.Accessories_search_box {
+  max-width: 360px;
+  width: 100%;
+  align-items: start;
+  background-color: #fff;
+  padding: 32px;
+
+  .accessories_icon_btn {
+    background-color: var(--secondary-font-color);
+    border: 1px solid #00000041;
+  }
+  .accessories_icon_btn:hover {
+    background-color: rgb(132, 18, 18);
+  }
+  .accessories_icon {
+    padding: 6px;
+    width: 36px;
+    height: 20px;
+    border: 0;
+    color: var(--primary-font-white);
+
+    border: 0;
+  }
+  .Accessories_search_box_input_box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    .Accessories_search_box_input {
+      font-size: 16px;
+      height: 42px;
+      outline: none;
+      border: 1px solid #00000041;
+      padding: 6px 32px 6px 6px;
+    }
+  }
+  .Accessories_search_box_p {
+    color: black;
+  }
+
+  .Accessories_search_box_input {
+    font-size: 16px;
+    height: 42px;
+    border: 1px solid #00000041;
+
+    padding: 6px 32px 6px 6px;
+  }
+}
+
+.Accessories_search {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.Accessories_filter_box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 32px;
+  gap: 17px;
+  max-width: 1320px;
+  margin-top: 5px;
+
+  .Accessories_filter_box_btn {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+
+  .Accessories_filter_btn {
+    display: flex;
+    padding: 8px 16px;
+    width: 80px;
+    height: 32px;
+
+    text-align: center;
+    background: var(--secondary-font-color);
+    color: #fff;
+    border: 1px solid transparent;
+  }
+
+  .Accessories_filter_btn:hover {
+    background-color: rgb(132, 18, 18);
+  }
+}
+
+.Accessories_filter_cotegory_box {
+  background-color: #fff;
+  padding: 32px;
+  margin-top: 5px;
+  h2 {
+    color: #4b4f58;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: "Racing Sans One", cursive;
+  }
+  p {
+    color: #000;
+  }
+}
+.Accessories_filter {
+  max-width: 550px;
+  width: 100%;
+  height: 400px;
+  align-items: start;
+  background-color: #a56262;
+}
+.accessories_icon_btn {
+  background-color: var(--secondary-font-color);
+  border: 1px solid #00000041;
+  .accessories_icon {
+    padding: 6px;
+    width: 36px;
+    height: 20px;
+    border: 0;
+    color: var(--primary-font-white);
+  }
+  .accessories_icon_btn:hover {
+    background-color: rgb(132, 18, 18);
+  }
+}
+.accessories_title_box {
+  max-width: 1200px;
+  padding: 15px;
+  // height: 1050px;
+
+  margin: 0 auto;
+  width: 100%;
+  border: red 1px solid;
+  background-color: #fff;
+
+  .accessories_title_box_p {
+    color: #0000009a;
+    font-weight: 600;
+
+    .accessories_title_box_a {
+      text-decoration: none;
+      // color: #0000007b;
+      font-weight: 600;
+      // font-size: 14px;
+    }
+  }
+
+  .accessories_title {
+    font-family: "Racing Sans One", display;
+    font-weight: 400;
+    font-size: 65px;
+    // padding-top: 50px;
+    color: var(--secondary-font-color);
+  }
+}
+.accessories__container {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #fff;
+}
+.accessories__mini_container {
+  position: relative;
+  margin-bottom: 0;
+  border: #ff0000 1px solid;
+  h3,
+  h4,
+  p,
+  .accessories_start {
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
+  &:hover .accessories__icon_cart {
+    opacity: 1;
+  }
+  .accessories__icon_cart {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--primary-font-white);
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    padding: 5px;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: var(--primary-font-black);
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  p {
+    color: black;
+    opacity: 0.6;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 18px;
+    font-family: "Racing Sans One", display;
+    font-weight: 300;
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+  }
+  h4 {
+    color: var(--primary-font-black);
+  }
+  .accessories__rating {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  h3::selection,
+  h1::selection,
+  h2::selection,
+  p::selection,
+  h4::selection,
+  h5::selection,
+  h6::selection,
+  img::selection,
+  span::selection {
+    background: var(--secondary-font-color);
+    color: #fff;
+  }
+}

@@ -1,0 +1,356 @@
+.bicycles_container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5f5;
+  height: 1200px;
+}
+
+.bicycles {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  gap: 50px;
+}
+
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
+}
+.lds-spinner {
+  color: currentColor;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3.2px;
+  left: 36.8px;
+  width: 6.4px;
+  height: 17.6px;
+  border-radius: 20%;
+  background: currentColor;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loader {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: linear-gradient(90deg, #000 70%, #0000 0) 0/20%;
+  background: linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+  animation: l4 2s infinite steps(6);
+}
+@keyframes l4 {
+  100% {
+    background-size: 120%;
+  }
+}
+
+.bicycles_title {
+  font-family: "Racing Sans One", display;
+  font-weight: 400;
+  font-size: 85px;
+  padding: 5px 50px;
+
+  color: var(--secondary-font-color);
+}
+
+.bicycles_home_title_p {
+  display: flex;
+  color: #000000aa;
+  padding: 15px 0 15px 50px;
+  gap: 5px;
+  li {
+    list-style: none;
+  }
+  p {
+    color: #000000aa;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+.bicycles_home_mini_container {
+  position: relative;
+  margin-bottom: 0;
+  padding: 5px;
+  h3,
+  h4,
+  p,
+  .accessories_start {
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
+  p {
+    color: black;
+    opacity: 1;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 18px;
+    font-family: "Racing Sans One", display;
+    font-weight: 300;
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+  }
+  h4 {
+    color: var(--primary-font-black);
+  }
+  .bicycles_home_rating {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  h3::selection,
+  h1::selection,
+  h2::selection,
+  p::selection,
+  h4::selection,
+  h5::selection,
+  h6::selection,
+  img::selection,
+  span::selection {
+    background: var(--secondary-font-color);
+    color: #fff;
+  }
+}
+
+.bicycles_home_title {
+  border: 5px #ff0000 solid;
+  background-color: #fff;
+  max-width: 1000px;
+  width: 100%;
+  margin: 50 auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.bicycles_home_container {
+  display: grid;
+  max-width: 900px;
+  width: 100%;
+  gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+}
+.bicycles_home_rating {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.bicycles_img {
+  width: 218px;
+  height: 218px;
+}
+
+.bicycles_home_icon_cart {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--primary-font-white);
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  padding: 5px;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: var(--primary-font-black);
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.bicycles_img_box {
+  width: 218px;
+  height: 218px;
+  overflow: hidden;
+}
+.bicycles_home_mini_container:hover .bicycles_home_icon_cart {
+  // visibility: visible;
+  opacity: 1;
+}
+
+.bicycles_search_box {
+  max-width: 360px;
+  width: 100%;
+  align-items: start;
+  background-color: #fff;
+  padding: 32px;
+
+  .bicycles_icon_btn {
+    padding: 8px;
+    width: 36px;
+    height: 42px;
+    background-color: red;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .bicycles_icon {
+      max-width: 15px;
+      width: 100%;
+      height: 15px;
+      border: 0;
+      color: var(--primary-font-white);
+    }
+    .bicycles_icon_btn:hover {
+      background-color: rgb(132, 18, 18);
+    }
+  }
+  .bicycles_search_input_box {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+    .bicycles_search_box_input {
+      width: 254px;
+      height: 42px;
+      padding: 0 8px;
+      box-sizing: border-box;
+      padding: 6px 32px 6px 6px;
+    }
+  }
+  .bicycles_search_box_p {
+    color: black;
+  }
+
+  .bicycles_search_box_input {
+    font-size: 16px;
+    height: 42px;
+    border: 1px solid #00000041;
+    padding: 6px 32px 6px 6px;
+  }
+}
+
+.bicycles_search {
+  display: flex;
+  margin-top: 50px;
+  border: 1px solid red;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bicycles_filter_box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 32px;
+  gap: 17px;
+  max-width: 1320px;
+  margin-top: 5px;
+
+  .bicycles_filter_box_btn {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  .bicycles_filter_btn_box {
+    display: flex;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: end;
+  }
+
+  .bicycles_filter_btn {
+    display: flex;
+    width: 80px;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 10px;
+    background: var(--secondary-font-color);
+    color: #fff;
+    border: 1px solid transparent;
+  }
+
+  .bicycles_filter_btn:hover {
+    background-color: rgb(132, 18, 18);
+  }
+}
+
+.bicycles_filter_cotegory_box {
+  background-color: #fff;
+  padding: 32px;
+  margin-top: 5px;
+  h2 {
+    color: #4b4f58;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: "Racing Sans One", cursive;
+  }
+  p {
+    color: #000;
+  }
+}
+
+.bicycles_filter {
+  max-width: 550px;
+  width: 100%;
+  height: 400px;
+  align-items: start;
+  background-color: #a56262;
+}
